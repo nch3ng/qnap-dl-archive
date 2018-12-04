@@ -71,15 +71,15 @@ RUN pip3 install keras==${KERAS_VERSION}
 RUN pip3 install torch torchvision
 
 # Set up our notebook config.
-COPY jupyter_notebook_config.py /root/.jupyter/
+COPY ../jupyter_notebook_config.py /root/.jupyter/
 
 # Copy sample notebooks.
-COPY notebooks /notebooks
+COPY ../notebooks /notebooks
 
 # Jupyter has issues with being run directly:
 #   https://github.com/ipython/ipython/issues/7062
 # We just add a little wrapper script.
-COPY run_jupyter.sh /
+COPY ../run_jupyter.sh /
 RUN chmod 755 /run_jupyter.sh
 
 
