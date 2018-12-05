@@ -4,6 +4,7 @@ LABEL maintainer=""
 
 ARG KERAS_VERSION=2.2.4
 ARG TENSORFLOW_VERSION=1.10.0
+ARG TENSORBOARD_LOG_DIR=/tmp
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
